@@ -16,7 +16,8 @@
             <div>
                 <p>published: {{ post.published_date }}</p>
                 <h1><a href="">{{ post.title }}</a></h1>
-                <div class="mono">{{ post.text|linebreaks }}</div>
+                <!-- <div class="mono">{{ post.text|linebreaks }}</div> -->
+                <pre>{{ post.text }}</pre>
             </div>
         {% endfor %}
         
