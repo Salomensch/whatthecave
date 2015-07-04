@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" hasBrowserHandlers="true">
+<head>
+<title>Gort! Klaatu barada nikto!</title>
+<link rel="stylesheet" href="chrome://global/skin/netError.css" type="text/css" media="all">
+
+</link>
+<link id="favicon" rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8%2F9hAAAACGFjVEwAAAASAAAAAJNtBPIAAAAaZmNUTAAAAAAAAAAQAAAAEAAAAAAAAAAALuAD6AABhIDeugAAALhJREFUOI2Nk8sNxCAMRDlGohauXFOMpfTiAlxICqAELltHLqlgctg1InzMRhpFAc%2BLGWTnmoeZYamt78zXdZmaQtQMADlnU0OIAlbmJUBEcO4bRKQY2rUXIPmAGnDuG%2FBx3%2FfvOPVaDUg%2BoAPUf1PArIMCSD5glMEsUGaG%2BkyAFWIBaCsKuA%2BHGCNijLgP133XgOEtaPFMy2vUolEGJoCIzBmoRUR9%2B7rxj16DZaW%2FmgtmxnJ8V3oAnApQwNS5zpcAAAAaZmNUTAAAAAEAAAAQAAAAEAAAAAAAAAAAAB4D6AIB52fclgAAACpmZEFUAAAAAjiNY2AYBVhBc3Pzf2LEcG...bAAAABpmY1RMAAAAGwAAABAAAAAQAAAAAAAAAAAAHgPoAgELOsoVAAAAFmZkQVQAAAAcOI1jYBgFo2AUjAIIAAAEEAAByfEBbAAAABpmY1RMAAAAHQAAABAAAAAQAAAAAAAAAAAAHgPoAgHm8LhvAAAAQGZkQVQAAAAeOI1jYBieYKcaw39ixHCC%2F6cwFWMTw2rz%2F1MM%2F6Vu%2Ff%2F%2F%2FxTD%2F51qEIwuRjsXILuEGLFRMApgAADhNCsVlxR3%2FgAAABpmY1RMAAAAHwAAABAAAAAQAAAAAAAAAAAAHgPoAgELZmuGAAAAFmZkQVQAAAAgOI1jYBgFo2AUjAIIAAAEEAABHP5cFQAAABpmY1RMAAAAIQAAABAAAAAQAAAAAAAAAAAAHgPoAgHlgtAOAAAAKmZkQVQAAAAiOI1jYBgFWEFzc%2FN%2FYsRwat6pxvAfWQM2Mdq5YBSMAnIAAPKbF%2F0%2FMvDdAAAAAElFTkSuQmCC"/>
+<script type="application/javascript">
+var buttonClicked = false;
+function robotButton()
+{
+var button = document.getElementById('errorTryAgain');
+if (buttonClicked) {
+button.style.visibility = "hidden";
+} else {
+var newLabel = button.getAttribute("label2");
+button.textContent = newLabel;
+buttonClicked = true;
+}
+}
+</script>
+<style type="text/css">
+#errorPageContainer {
+background-image: none;
+}
+#errorPageContainer:before {
+content: url('chrome://browser/content/aboutRobots-icon.png');
+position: absolute;
+}
+body[dir=rtl] #icon,
+body[dir=rtl] #errorPageContainer:before {
+transform: scaleX(-1);
+}
+</style>
+</head>
+<body dir="ltr">
+<div id="errorPageContainer">
+<div id="errorTitle">
+<h1 id="errorTitleText">Welcome Humans!</h1>
+</div>
+<div id="errorLongContent">
+<div id="errorShortDesc">
+<p id="errorShortDescText">We have come to visit you in peace and with goodwill!</p>
+</div>
+<div id="errorLongDesc">
+<ul>
+<li>Robots may not injure a human being or, through inaction, allow a human being to come to harm.</li>
+<li>Robots have seen things you people wouldn't believe.</li>
+<li>Robots are Your Plastic Pal Who's Fun To Be With</li>
+<li>Robots have shiny metal posteriors which should not be bitten.</li>
+</ul>
+</div>
+<div id="errorTrailerDesc">
+<p id="errorTrailerDescText">And they have a plan.</p>
+</div>
+</div>
+<button id="errorTryAgain" label2="Please do not press this button again." onclick="robotButton();">Nochmals versuchen</button>
+<img src="chrome://browser/content/aboutRobots-widget-left.png" style="position: absolute; bottom: -12px; left: -10px;"/>
+<img src="chrome://browser/content/aboutRobots-widget-left.png" style="position: absolute; bottom: -12px; right: -10px; transform: scaleX(-1);"/>
+</div>
+</body>
+</html>
